@@ -13,3 +13,5 @@ database.insert(dados).into("games").then(data =>{
 }).catch(err =>{
     console.log(err);
 })
+
+
