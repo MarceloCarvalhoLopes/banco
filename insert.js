@@ -1,8 +1,8 @@
 var database = require("./database");
 
 var dados = {
-    name: "Minecraft",
-    price: 37.55
+    name: "Mario World",
+    price: 100.55
 }
 
 /*var query  = database.insert(dados).into("games");
