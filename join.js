@@ -12,3 +12,23 @@ database.select([
             }).catch(err => {
                   console.log(err);
             })                  
+
+
+async function testTransaction(){
+      
+      try{
+          await database.transaction( async trans => {
+          await database.insert({name:"Bom games"}).table("estudios");
+          await database.insert({name:"Pyxerelia"}).table("estudios");
+          await database.insert({name:"Mojang"}).table("estudios");
+          await database.insert({name:"Gearbox"}).table("estudios");
+                  
+
+          });      
+      }catch (error) {
+            console.log(error);
+      }
+
+}            
+
+testTransaction();
